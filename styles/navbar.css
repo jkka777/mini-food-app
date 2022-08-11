@@ -1,0 +1,40 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    height: 50px;
+    width: 98%;
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(54, 54, 54);
+}
+
+.navbar>a {
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+    background-color: transparent;
+}
+
+.navbar>a:hover {
+    color: red;
+}
+
+.navbar>button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: larger;
+    cursor: pointer;
+}
+
+.navbar>button:hover {
+    color: red;
+}

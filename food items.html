@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Food</title>
+</head>
+
+<body>
+    <div>
+        <input type="url" placeholder="Image" id="image">
+        <input type="text" placeholder="Food" id="food">
+        <input type="number" placeholder="Price" id="price">
+        <button class="submit">Submit</button>
+    </div>
+</body>
+
+</html>
+<script>
+
+    let food_items = JSON.parse(localStorage.getItem('food')) || [];
+
+    let AddFoodItem = () => {
+
+        let food_data =
+        {
+            image: document.querySelector('#image').value,
+            food: document.querySelector('#food').value,
+            price: document.querySelector('#price').value,
+        }
+
+        food_items.push(food_data);
+
+        localStorage.setItem('food', JSON.stringify(food_items));
+
+        document.querySelector('#image').value = '';
+        document.querySelector('#food').value = '';
+        document.querySelector('#price').value = '';
+
+    };
+
+    console.log(food_items);
+
+    document.querySelector('.submit').addEventListener('click', AddFoodItem);
+</script>
